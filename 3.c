@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 // Função inteira que recebe como parâmetros dois ponteiros 'p' e 'q':
-int sum_numbers(int *p, int *q){
+int sum_numbers(int *p, int *q)
+{
     // Variáveis locais 'x' e 'y' estão armazenando os valores contidos nos endereços aos quais apontam '*p' e '*q'
     // Lembrando que '*p' = '*ptr1' e '*q' = '*ptr2'. Portando 'p' aponta para o endereço de '*a' e '*q' para o endereço de 'b':
     int x = *p, y = *q;
