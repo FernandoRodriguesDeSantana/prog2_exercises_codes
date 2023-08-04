@@ -1,34 +1,51 @@
-/*Faça um programa que utiliza duas funções: uma que
-recebe um ponteiro e adiciona 1 ao seu valor e outra
-que recebe dois ponteiros inteiros e retorna a soma dos
-valores apontados. */
-
+//Crie uma função que recebe dois inteiros e um ponteiro para um inteiro e realiza a soma dos dois primeiros.
 #include <stdio.h>
 #include <stdlib.h>
 
-int increase(int *p)
+// Função inteira que recebe como parâmetros dois ponteiros 'p' e 'q':
+int sum_numbers(int *p, int *q)
 {
-    int x = *p;
-    x = x + 1;
-    return (x);
-};
+    /* FORMA NÃO OTIMIZADA:
+    // Variáveis locais 'x' e 'y' estão armazenando os valores contidos nos endereços aos quais apontam '*p' e '*q'
 
+    // Lembrando que '*p' = '*ptr1' e '*q' = '*ptr2'. Portando 'p' aponta para o endereço de '*a' e '*q' para o endereço de 'b':
+
+    int x = *p, y = *q; NÃO HÁ  A NECESSIDADE DE CRIAR MAIS DUAS VARIÁVEIS PARA ARMAZENAR OS VALORES DE *P E *Q POIS É POSSÍVEL
+    PASSAR OS VALORES DE *P E *Q PARA A VARIÁVEL INT SUM DIRETAMENTE
+
+    // Soma os valores contidos nos respectivos endereços:
+    int sum = x + y;
+    */
+
+    // FORMA OTIMIZADA:
+    int sum = *p + *q;
+
+    // Retorna o valor da operação:
+    return sum;
+};
 
 int main()
 {
-    int a = 0, result = 0, option = 0;
-    int *ptr1;
-    ptr1 = &a;
-    
-    do
-    {
-        result = increase(ptr1);
-        *ptr1 = result;
-        printf("The increase result is: %d", result);
-        printf("\nIncrease again? (0) No (1) Yes: ");
-        scanf("%d", &option);
-    } while(option != 0);
+    // Variáveis "normais" que estão recebendo valores inteiros:
+    int a = 21, b = 10, soma = 0;
 
-    
+    /*  ESTA DECLARAÇÃO DE PONTEIROS NÃO É NECESSÁRIA
+
+    // Declarando dois ponteiros:
+    int *ptr1;
+    int *ptr2;
+
+    // Armazenando o endereço de 'a=20' no ponteiro 'ptr1' e o endereço de 'b=10' no 'ptr2':
+    ptr1 = &a;
+    ptr2 = &b;
+    */
+
+    // A função criada 'sum_numbers' está recebendo os ponteiros 'ptr1' e 'ptr2' como parâmetro
+    // nos quais estão armazenados os endereços de 'a' e 'b' respectivamente:
+    soma = sum_numbers(&a, &b); //ATRIBUIÇÃO DIRETA DO ENDEREÇO DE a E b AOS PONTEIROS PASSADOS COMO PARÂMETROS NA FUNÇÃO SUM_NUMBERS
+
+    // Imprimindo o valor da soma entre 'a' e 'b':
+    printf("The sum between %d and %d is %d\n", a,b,soma);
+
     return 0;
 }
