@@ -29,7 +29,7 @@ int main()
     // Variáveis "normais" que estão recebendo valores inteiros:
     int a = 21, b = 10, soma = 0;
 
-    /*  ESTA DECLARAÇÃO DE PONTEIROS NÃO É NECESSÁRIA
+    /*  ESTA DECLARAÇÃO DE PONTEIROS NÃO É NECESSÁRIA:
 
     // Declarando dois ponteiros:
     int *ptr1;
