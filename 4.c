@@ -1,51 +1,67 @@
-//Crie uma função que recebe dois inteiros e um ponteiro para um inteiro e realiza a soma dos dois primeiros.
+// CALCULADORA
 #include <stdio.h>
 #include <stdlib.h>
 
-// Função inteira que recebe como parâmetros dois ponteiros 'p' e 'q':
-int sum_numbers(int *p, int *q)
+float sum(float *numbers[], int *num_size)
 {
-    /* FORMA NÃO OTIMIZADA:
-    // Variáveis locais 'x' e 'y' estão armazenando os valores contidos nos endereços aos quais apontam '*p' e '*q'
+    float *sum_result;
+    float operation = 0;
 
-    // Lembrando que '*p' = '*ptr1' e '*q' = '*ptr2'. Portando 'p' aponta para o endereço de '*a' e '*q' para o endereço de 'b':
+    for(int i = 0; i < *num_size; i++)
+    {
+        operation = operation + *numbers[i];
+    }
 
-    int x = *p, y = *q; NÃO HÁ  A NECESSIDADE DE CRIAR MAIS DUAS VARIÁVEIS PARA ARMAZENAR OS VALORES DE *P E *Q POIS É POSSÍVEL
-    PASSAR OS VALORES DE *P E *Q PARA A VARIÁVEL INT SUM DIRETAMENTE
-
-    // Soma os valores contidos nos respectivos endereços:
-    int sum = x + y;
-    */
-
-    // FORMA OTIMIZADA:
-    int sum = *p + *q;
-
-    // Retorna o valor da operação:
-    return sum;
+    sum_result = &operation;
+    return *sum_result;
 };
 
 int main()
 {
-    // Variáveis "normais" que estão recebendo valores inteiros:
-    int a = 21, b = 10, soma = 0;
+    int i = 0, operation = 0;
 
-    /*  ESTA DECLARAÇÃO DE PONTEIROS NÃO É NECESSÁRIA:
+    // HOW MUCH NUMBERS:
+    int n = 0;
+    printf("  > How much numbers do you want enter?: ");
+    scanf("%d", &n);
 
-    // Declarando dois ponteiros:
-    int *ptr1;
-    int *ptr2;
+    // FLOAT ARRAY WITH LENGTH N
+    float numbers[n];
 
-    // Armazenando o endereço de 'a=20' no ponteiro 'ptr1' e o endereço de 'b=10' no 'ptr2':
-    ptr1 = &a;
-    ptr2 = &b;
+    // STORING n VALUES IN THE ARRAY NUMBERS:
+    printf("\n  > Enter %d numbers: ", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%f", &numbers[i]);
+    }
+
+    /* TESTING THE NUMBERS STORAGE
+    for(i = 0; i < n; i++)
+    {
+        printf("\n%.2f", numbers[i]);
+    }
     */
 
-    // A função criada 'sum_numbers' está recebendo os ponteiros 'ptr1' e 'ptr2' como parâmetro
-    // nos quais estão armazenados os endereços de 'a' e 'b' respectivamente:
-    soma = sum_numbers(&a, &b); //ATRIBUIÇÃO DIRETA DO ENDEREÇO DE a E b AOS PONTEIROS PASSADOS COMO PARÂMETROS NA FUNÇÃO SUM_NUMBERS
+    // ASKING THE MATH OPERATION
+    printf("\nWhich operation do you want make with this numbers: \n(0)Sum\n(1)Subtration\n(2)Mult\n(3)Div\n  > Your option: ");
+    scanf("%d", &operation);
 
-    // Imprimindo o valor da soma entre 'a' e 'b':
-    printf("The sum between %d and %d is %d\n", a,b,soma);
+    switch(operation)
+    {
+        float result_op_sum = 0;
 
-    return 0;
+        case 0:
+            sum(&numbers, &n);
+            printf("\nThe result of the sum operation is: %.2f", sum);
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            printf("\nInvalid operation...");
+            break;
+    }
 }
