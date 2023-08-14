@@ -1,3 +1,5 @@
+// Defina uma nova estrutura que utiliza escrita de arquivos para armazenar informações de funcionários em um arquivo de texto.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
