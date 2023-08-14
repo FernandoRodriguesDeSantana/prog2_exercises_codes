@@ -1,3 +1,5 @@
+// Defina uma nova estrutura chamada ‘Aluno’, que contenha uma string nome, idade e nota de um aluno.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
