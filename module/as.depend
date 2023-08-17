@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1692272190 source:c:\users\aluno\desktop\as\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ponto.h"
+
+1692272038 c:\users\aluno\desktop\as\ponto.h
+
+1692272385 source:c:\users\aluno\desktop\as\ponto.c
+	"ponto.h"
+	<math.h>
+
