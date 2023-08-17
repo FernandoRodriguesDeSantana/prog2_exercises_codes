@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1692273876 source:c:\users\aluno\desktop\electrical\electric_c.c
+	"electric.h"
+	<math.h>
+
+1692273876 c:\users\aluno\desktop\electrical\electric.h
+
+1692273876 source:c:\users\aluno\desktop\electrical\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"electric.h"
+
