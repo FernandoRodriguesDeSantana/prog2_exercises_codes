@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1694689190 source:c:\users\aluno\desktop\q1\linear_queue.c
+	"linear_queue.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1694689190 c:\users\aluno\desktop\q1\linear_queue.h
+
+1694689683 source:c:\users\aluno\desktop\q1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"linear_queue.h"
+
