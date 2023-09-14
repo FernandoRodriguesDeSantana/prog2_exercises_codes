@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1694693409 source:c:\users\aluno\desktop\fernando_provaprogii\q3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"linear_queue_2.h"
+
+1694694194 c:\users\aluno\desktop\fernando_provaprogii\q3\linear_queue_2.h
+
+1694694088 source:c:\users\aluno\desktop\fernando_provaprogii\q3\linear_queue_2.c
+	"linear_queue_2.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
