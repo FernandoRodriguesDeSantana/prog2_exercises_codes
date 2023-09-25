@@ -3,7 +3,7 @@
 #define LIB_MAT_H
 
 int factorial(int a);
-double absolute(double a, double b);
-double square(double a, double b);
+int absolute(int a);
+float square(float a);
 
 #endif // LIB_MAT_H

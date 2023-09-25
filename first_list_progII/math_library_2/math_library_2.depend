@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1695682909 source:c:\users\jogos\desktop\math_library_2\lib_mat.c
+	"lib_mat.h"
+
+1695682893 c:\users\jogos\desktop\math_library_2\lib_mat.h
+
+1695682893 source:c:\users\jogos\desktop\math_library_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib_mat.h"
+

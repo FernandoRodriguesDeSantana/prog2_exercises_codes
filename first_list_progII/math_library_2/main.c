@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "lib_mat.h"
 
 int main()
 {
-    printf("Hello world!\n");
+    int a = -5;
+
+    factorial(a);
+    absolute(a);
+    square(a);
     return 0;
 }
