@@ -5,8 +5,9 @@
 typedef struct Student
 {
     char name[50];
-    int  code;
-    char course [30];
+    char course[30];
+    int code;
 } Student;
 
+void studentInformation(struct Student, int numberStudent);
 #endif // STUDENTS_IFSC_H

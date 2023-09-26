@@ -1,12 +1,23 @@
-// Desenvolva a partir da modularização um programa com o seguintes requisitos:
-// a. Deve armazenar as informações da quantidade desejada de alunos do IFSC: nome, matrícula e curso.
-// b. Utilize alocação de memória para criar um vetor dinâmico de alunos
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "students_ifsc.h"
+typedef struct Student_h
+{
+    char name[50];
+    char course[30];
+    int code;
+} Student_h;
 
 int main()
 {
-    printf("Hello world!\n");
+    int numberStudent = 0;
+
+    printf("Enter the number of new students: ");
+    scanf("%d", &numberStudent);
+
+    Student student[numberStudent];
+
+
     return 0;
 }

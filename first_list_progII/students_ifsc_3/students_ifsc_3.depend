@@ -1,8 +1,13 @@
 # depslib dependency file v1.0
-1695685636 source:c:\users\jogos\desktop\students_ifsc_3\main.c
+1695738491 source:c:\users\jogos\desktop\students_ifsc_3\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"students_ifsc.h"
 
-1695688453 c:\users\jogos\desktop\students_ifsc_3\students_ifsc.h
+1695738476 c:\users\jogos\desktop\students_ifsc_3\students_ifsc.h
+
+1695739257 source:c:\users\jogos\desktop\students_ifsc_3\students_ifsc.c
+	"students_ifsc.h"
+	<stdlib.h>
 

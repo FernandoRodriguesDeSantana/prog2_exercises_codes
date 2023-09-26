@@ -1,14 +1,27 @@
 #include "students_ifsc.h"
-#include <string.h>
-#include <stdio.h>
+#include <stdlib.h>
 
-Student *newStudent(char name_s[], int code_s, char course_s[])
+void studentInformation(struct Student student, int numberStudent)
 {
-    Student *newInformation = malloc(sizeof(Student));
-    if(newInformation == NULL)
+    Student *sizeStudent = (Student *)malloc(numberStudent*sizeof(Student));
+    if(sizeStudent == NULL)
     {
-        printf("\nERROR IN THE MEMORY ALLOCATION");
+        printf("ERROR!");
         return NULL;
     }
-}
 
+    Student student_f[numberStudent];
+
+    for(int i = 0; i < numberStudent; i++)
+    {
+        printf("\nEnter the student's name number %d: ", i+1);
+        strncpy(student.name, student_f[i].name, sizeof(student.name));
+
+        printf("\nEnter the student's course number %d: ", i+1);
+        strncpy(student.course, student_f[i].course, sizeof(student.course));
+
+        printf("\nEnter the student's code number %d: ", i+1);
+        scanf("%d", &student_f[i].code);
+    }
+
+}
