@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1695685636 source:c:\users\jogos\desktop\students_ifsc_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"students_ifsc.h"
+
+1695688453 c:\users\jogos\desktop\students_ifsc_3\students_ifsc.h
+
