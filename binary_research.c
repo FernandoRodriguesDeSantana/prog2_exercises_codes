@@ -42,6 +42,43 @@ int main()
         }
     }
 
+
+
+
+
+
+
+    int searchNumber(int array[], int wantedNumber)
+{
+    int arraySize = sizeof(array) / sizeof(array[0]);
+    int lowerPosition = 0, higherPosition = arraySize;
+    int middlePosition = arraySize / 2;
+
+    if(wantedNumber == array[middlePosition])
+    {
+        printf("\n  >The number %d was finded at the middle", wantedNumber);
+    }
+    else if(wantedNumber <= array[middlePosition])
+    {
+        arraySize = middlePosition;
+        middlePosition = arraySize / 2;
+            if(wantedNumber == array[middlePosition])
+        {
+            printf("\n  >The number %d was finded at the middle", wantedNumber);
+        }
+    }
+    else if(wantedNumber <= array[middlePosition])
+    {
+        arraySize = middlePosition;
+        middlePosition = arraySize / 2;
+            if(wantedNumber == array[middlePosition])
+        {
+            printf("\n  >The number %d was finded at the middle", wantedNumber);
+        }
+    }
+
+}
+
     //for(int)
     return 0;
 }
