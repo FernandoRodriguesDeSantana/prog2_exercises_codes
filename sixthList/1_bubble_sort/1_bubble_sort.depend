@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1696731843 source:c:\users\flrss\onedrive\Área de trabalho\1_bubble_sort\bubble_sort.c
+	"bubble_sort.h"
+	<stdio.h>
+
+1696732273 c:\users\flrss\onedrive\Área de trabalho\1_bubble_sort\bubble_sort.h
+
+1696733838 source:c:\users\flrss\onedrive\Área de trabalho\1_bubble_sort\main.c
+	"bubble_sort.h"
+	<stdio.h>
+	<stdlib.h>
+
