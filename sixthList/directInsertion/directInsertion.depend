@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1696787874 source:c:\users\flrss\onedrive\Área de trabalho\sixthlist\directinsertion\main.c
+	"directInsertion.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1696779660 c:\users\flrss\onedrive\Área de trabalho\sixthlist\directinsertion\directinsertion.h
+
+1696787856 source:c:\users\flrss\onedrive\Área de trabalho\sixthlist\directinsertion\directinsertion.c
+	"directInsertion.h"
+	<string.h>
+
