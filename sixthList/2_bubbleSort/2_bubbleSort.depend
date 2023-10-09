@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1696810485 source:c:\users\flrss\onedrive\Área de trabalho\sixthlist\2_bubblesort\main.c
+	"2_bubbleSort.h"
+	<stdio.h>
+	<stdlib.h>
+
+1696792173 c:\users\flrss\onedrive\Área de trabalho\sixthlist\2_bubblesort\2_bubblesort.h
+
+1696810779 source:c:\users\flrss\onedrive\Área de trabalho\sixthlist\2_bubblesort\2_bubblesort.c
+	"2_bubblesort.h"
+	<stdio.h>
+
