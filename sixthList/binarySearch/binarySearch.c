@@ -28,15 +28,30 @@ void alphabeticalOrdenation(char *wordsArray[], int numberOfElements)
     }
 }
 
-char binarySearch(char *wordsArray, int numberOfELements)
+int binarySearch(char *wordsArray[], int numberOfElements, char *targetElement)
 {
-    char firstElement = wordsArray[0];
-    char lastElement= wordsArray[numberOfELements - 1];
-    char middleElement = wordsArray[numberOfELements/2];
-    char targetElement[] = {"dog"};
+    int firstElement = 0, lastElement = (numberOfElements - 1);
 
-    if(middleElement == targetElement)
+    while (firstElement <= lastElement)
     {
+        int middleElement = ((firstElement + lastElement) / 2);
+        int comparison = strcmp(wordsArray[middleElement], targetElement);
 
+        if (comparison == 0)
+        {
+            printf("\n%s finded in the position %d\n", targetElement, middleElement);
+            return middleElement;
+        }
+        else if (comparison < 0)
+        {
+            firstElement = middleElement + 1;
+        }
+        else
+        {
+            lastElement = middleElement - 1;
+        }
     }
+
+    printf("\n%s don't found\n", targetElement);
+    return -1;
 }

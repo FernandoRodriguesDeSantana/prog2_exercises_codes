@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1696816126 source:c:\users\flrss\onedrive\햞ea de trabalho\sixthlist\binarysearch\binarysearch.c
+1696851148 source:c:\users\flrss\onedrive\햞ea de trabalho\sixthlist\binarysearch\binarysearch.c
 	"binarySearch.h"
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 
-1696815557 c:\users\flrss\onedrive\햞ea de trabalho\sixthlist\binarysearch\binarysearch.h
+1696850791 c:\users\flrss\onedrive\햞ea de trabalho\sixthlist\binarysearch\binarysearch.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 
-1696815987 source:c:\users\flrss\onedrive\햞ea de trabalho\sixthlist\binarysearch\main.c
+1696850964 source:c:\users\flrss\onedrive\햞ea de trabalho\sixthlist\binarysearch\main.c
 	<stdio.h>
 	<stdlib.h>
 	"binarySearch.h"
