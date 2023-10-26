@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\flrss\onedrive\Área de trabalho\simplylinkedlist\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1698351636 source:c:\users\flrss\onedrive\Área de trabalho\simplylinkedlist\simplylinkedlist.c
+	"simplyLinkedList.h"
+	<stdio.h>
+	<stdlib.h>
+
+1698351636 c:\users\flrss\onedrive\Área de trabalho\simplylinkedlist\simplylinkedlist.h
+
