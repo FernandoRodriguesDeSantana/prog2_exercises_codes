@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1698603361 source:c:\users\flrss\onedrive\Área de trabalho\aleatorio\tavanaareadetrabalho\thirdlistfernando\simplylinkedlistfernando\main.c
+	<stdio.h>
+	<stdlib.h>
+	"simplyLinkedListFernando.h"
+
+1698602962 source:c:\users\flrss\onedrive\Área de trabalho\aleatorio\tavanaareadetrabalho\thirdlistfernando\simplylinkedlistfernando\simplylinkedlistfernando.c
+	"simplyLinkedListFernando.h"
+	<stdio.h>
+	<stdlib.h>
+
+1698602771 c:\users\flrss\onedrive\Área de trabalho\aleatorio\tavanaareadetrabalho\thirdlistfernando\simplylinkedlistfernando\simplylinkedlistfernando.h
+
