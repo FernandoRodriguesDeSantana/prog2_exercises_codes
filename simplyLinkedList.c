@@ -89,3 +89,75 @@ int main()
     printf("Hello world!\n");
     return 0;
 }
+
+
+//======================================================================================================================================
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node{
+	int data;
+	struct node *next;
+}node;
+
+//pointer to pointer is used to make changes in the list
+void buildNodeAtBegin(struct node **head, int number){
+	node *newNode = (node *)malloc(sizeof(node));
+    if(newNode){
+        newNode -> data = number;
+        newNode -> next = *head;    //*head = address of the first node
+        *head = newNode;
+    }
+    else
+        printf("\nERROR!");
+}
+
+void buildNodeAtEnd(struct node **head, int number){
+    node *newNode, *aux =(node *)malloc(sizeof(node));
+    if(newNode){
+        newNode -> data = number;
+        newNode -> next = NULL;
+    }
+        if(*head == NULL){
+            *head = newNode;
+        }
+        else{
+            aux = *head;
+            while(aux -> next != NULL)
+                aux = aux -> next;
+            aux -> next = newNode;
+        }
+}
+
+void buildNodeAtMiddle(struct node **head, int number, int beforeNumber){
+    node *aux, *newNode = (node *)malloc(sizeof(node));
+    if(newNode){
+        newNode -> data = number;
+        if(*head == NULL){
+            newNode -> next = NULL;
+            *head = newNode;
+        }
+        else{
+            aux = *head;
+            while(aux -> data != beforeNumber && aux -> next)
+                aux = aux -> next;
+            newNode -> next = aux -> next;
+            aux -> next = newNode;
+        }
+    }
+    else
+        printf("\nERROR!");
+}
+
+void printList(struct node *head){
+    printf("\nList: ");
+    while(head -> next != NULL){
+        printf("%d ", head -> data);
+        node = node -> next;
+    }
+    printf("\n\n");
+}
+
+int main() {
+	return 0;
+}
