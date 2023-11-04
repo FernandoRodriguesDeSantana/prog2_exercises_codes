@@ -92,72 +92,106 @@ int main()
 
 
 //======================================================================================================================================
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-typedef struct node{
-	int data;
-	struct node *next;
-}node;
+typedef struct node {
+    int data;
+    struct node *next;
+} node;
 
-//pointer to pointer is used to make changes in the list
-void buildNodeAtBegin(struct node **head, int number){
-	node *newNode = (node *)malloc(sizeof(node));
-    if(newNode){
-        newNode -> data = number;
-        newNode -> next = *head;    //*head = address of the first node
+void buildNodeAtBegin(struct node **head, int number) {
+    node *newNode = (node *)malloc(sizeof(node));
+    if (newNode) {
+        newNode->data = number;
+        newNode->next = *head;
         *head = newNode;
-    }
-    else
+    } else {
         printf("\nERROR!");
+    }
 }
 
-void buildNodeAtEnd(struct node **head, int number){
-    node *newNode, *aux =(node *)malloc(sizeof(node));
-    if(newNode){
-        newNode -> data = number;
-        newNode -> next = NULL;
-    }
-        if(*head == NULL){
-            *head = newNode;
-        }
-        else{
-            aux = *head;
-            while(aux -> next != NULL)
-                aux = aux -> next;
-            aux -> next = newNode;
-        }
-}
+void buildNodeAtEnd(struct node **head, int number) {
+    node *newNode = (node *)malloc(sizeof(node));
+    if (newNode) {
+        newNode->data = number;
+        newNode->next = NULL;
 
-void buildNodeAtMiddle(struct node **head, int number, int beforeNumber){
-    node *aux, *newNode = (node *)malloc(sizeof(node));
-    if(newNode){
-        newNode -> data = number;
-        if(*head == NULL){
-            newNode -> next = NULL;
+        if (*head == NULL) {
             *head = newNode;
+        } else {
+            node *aux = *head;
+            while (aux->next)
+                aux = aux->next;
+            aux->next = newNode;
         }
-        else{
-            aux = *head;
-            while(aux -> data != beforeNumber && aux -> next)
-                aux = aux -> next;
-            newNode -> next = aux -> next;
-            aux -> next = newNode;
-        }
-    }
-    else
+    } else {
         printf("\nERROR!");
+    }
 }
 
-void printList(struct node *head){
+void buildNodeAtMiddle(struct node **head, int number, int beforeNumber) {
+    node *newNode = (node *)malloc(sizeof(node));
+    if (newNode) {
+        newNode->data = number;
+        if (*head == NULL) {
+            newNode->next = NULL;
+            *head = newNode;
+        } else {
+            node *aux = *head;
+            while (aux->data != beforeNumber && aux->next)
+                aux = aux->next;
+            newNode->next = aux->next;
+            aux->next = newNode;
+        }
+    } else {
+        printf("\nERROR!");
+    }
+}
+
+void printList(struct node *head) {
     printf("\nList: ");
-    while(head -> next != NULL){
-        printf("%d ", head -> data);
-        node = node -> next;
+    while (head) {
+        printf("%d ", head->data);
+        head = head->next;
     }
     printf("\n\n");
 }
 
 int main() {
-	return 0;
+    int option, number, reference = 0;
+    node *head = NULL;
+
+    do {
+        printf("\n(1)Insert at begin\n(2)Insert at end\n(3)Insert at middle\n(4)Print list\n(0)Leave\n\t>Option: ");
+        scanf("%d", &option);
+
+        switch (option) {
+            case 1:
+                printf("\nEnter a value: ");
+                scanf("%d", &number);
+                buildNodeAtBegin(&head, number);
+                break;
+            case 2:
+                printf("\nEnter a value: ");
+                scanf("%d", &number);
+                buildNodeAtEnd(&head, number);
+                break;
+            case 3:
+                printf("\nEnter a value and the predecessor element: ");
+                scanf("%d%d", &number, &reference);
+                buildNodeAtMiddle(&head, number, reference);
+                break;
+            case 4:
+                printList(head);
+                break;
+            default:
+                if (option != 0)
+                    printf("\nWrong option!");
+                else
+                    printf("\nLeaving...");
+        }
+    } while (option != 0);
+
+    return 0;
 }
