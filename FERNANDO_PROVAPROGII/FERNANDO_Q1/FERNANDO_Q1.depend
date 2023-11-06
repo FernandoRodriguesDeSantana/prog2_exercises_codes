@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1699271159 source:c:\users\aluno\desktop\fernando_provaprogii\fernando_q1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+	<string.h>
+
+1699271159 c:\users\aluno\desktop\fernando_provaprogii\fernando_q1\functions.h
+
+1699270876 source:c:\users\aluno\desktop\fernando_provaprogii\fernando_q1\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+	<string.h>
+
