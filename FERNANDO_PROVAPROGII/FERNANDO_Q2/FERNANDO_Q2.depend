@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1699273625 source:c:\users\aluno\desktop\fernando_provaprogii\fernando_q2\functions.c
+1699278844 source:c:\users\aluno\desktop\fernando_provaprogii\fernando_q2\functions.c
 	"functions.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1699274252 c:\users\aluno\desktop\fernando_provaprogii\fernando_q2\functions.h
+1699279234 c:\users\aluno\desktop\fernando_provaprogii\fernando_q2\functions.h
 
-1699274311 source:c:\users\aluno\desktop\fernando_provaprogii\fernando_q2\main.c
+1699278844 source:c:\users\aluno\desktop\fernando_provaprogii\fernando_q2\main.c
 	"functions.h"
 	<stdio.h>
 	<stdlib.h>
