@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1699528243 source:c:\users\aluno\desktop\finalproject\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1699528243 c:\users\aluno\desktop\finalproject\functions.h
+
