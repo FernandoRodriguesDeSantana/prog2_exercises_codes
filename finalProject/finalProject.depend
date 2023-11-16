@@ -1,8 +1,19 @@
 # depslib dependency file v1.0
-1699528243 source:c:\users\aluno\desktop\finalproject\functions.c
+1700132603 source:c:\users\aluno\desktop\finalproject\main.c
 	<stdio.h>
 	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<time.h>
 	"functions.h"
 
-1699528243 c:\users\aluno\desktop\finalproject\functions.h
+1700132175 c:\users\aluno\desktop\finalproject\functions.h
+
+1700132609 source:c:\users\aluno\desktop\finalproject\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<time.h>
+	"functions.h"
 

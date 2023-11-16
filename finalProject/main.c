@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <string.h>
-
+#include <time.h>
 #include "functions.h"
 
 // 100 sorted persons
@@ -42,7 +42,6 @@ int main(){
         }
         fclose(database);
     }
-
 
     return 0;
 }

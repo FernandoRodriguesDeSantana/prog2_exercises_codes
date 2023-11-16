@@ -1,0 +1,6 @@
+SG_UF_RESIDENCIA -> CHAR[2]
+NU_NOTA_CN -> $1.f
+NU_NOTA_CH -> $1.f
+NU_NOTA_LC -> $1.f
+NU_NOTA_MT -> $1.f
+NU_NOTA_REDACAO -> int
