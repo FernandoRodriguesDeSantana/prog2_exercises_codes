@@ -7,13 +7,14 @@
 // 100 sorted persons
 #define MAX_RANDOM_LINES 100
 
-int main(){
+int main() {
     setlocale(LC_ALL, "Portuguese");
+
     FILE *database = fopen("microdados_enem_2016_coma.csv", "r");
 
-    if(!database)
+    if (!database)
         printf("\nERROR: could not open file\n");
-    else{
+    else {
         printf("\nI was able to open the file\n");
         char buffer[1024];
         int row = 0, column = 0;
@@ -30,21 +31,20 @@ int main(){
             column = 0;
             row++;
 
-            if(row == 1)
+            if (row == 1)
                 continue;
 
             char *data = strtok(buffer, ", ");
 
-            while(data){
-
-                if(column == 0)
+            while (data) {
+                if (column == 0)
                     printf("\n\tSerial code: ");
-
-                if(column == 1)
+                else if (column == 1)
                     printf("\n\tYear: ");
-
-                if(column == 2)
+                else if (column == 2)
                     printf("\n\tCity: ");
+                else
+                    printf(" ");  // Adiciona espaço extra após a vírgula
 
                 printf("%s", data);
                 data = strtok(NULL, ", ");
@@ -53,8 +53,6 @@ int main(){
             printf("\n");
         }
         fclose(database);
-
     }
     return 0;
 }
-
