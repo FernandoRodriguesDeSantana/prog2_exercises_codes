@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <string.h>
 #include <time.h>
-#include "functions.h"
+#include <locale.h>
 
 // 100 sorted persons
 #define MAX_RANDOM_LINES 100
 
 int main(){
-
+    setlocale(LC_ALL, "Portuguese");
     FILE *database = fopen("microdados_enem_2016_coma.csv", "r");
 
     if(!database)
@@ -17,7 +16,7 @@ int main(){
     else{
         printf("\nI was able to open the file\n");
         char buffer[1024];
-        int row, column = 0;
+        int row = 0, column = 0;
 
         long databaseSize, position;
 
@@ -25,9 +24,9 @@ int main(){
 
         fseek(database, 0, SEEK_END);
         databaseSize = ftell(database);
+        fseek(database, 0, SEEK_SET);
 
-
-        while(fgets(buffer, sizeof(buffer), database)){
+        while (fgets(buffer, sizeof(buffer), database) && row < MAX_RANDOM_LINES) {
             column = 0;
             row++;
 
@@ -52,23 +51,10 @@ int main(){
                 column++;
             }
             printf("\n");
-
-        /*
-            for(int i = 0; i < MAX_RANDOM_LINES; i++){
-                position = rand() % databaseSize;
-
-                fseek(database, position, SEEK_SET);
-
-                if(fgets(buffer, sizeof(buffer), database) != NULL)
-                    printf("\n\tSorted line %d: %s", i+1, buffer);
-                else{
-                    fprintf(stderr, "ERROR\n");
-                    break;
-                }
-            }*/
         }
         fclose(database);
 
     }
     return 0;
 }
+
