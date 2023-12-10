@@ -10,48 +10,12 @@
 int main() {
     setlocale(LC_ALL, "Portuguese");
 
-    FILE *database = fopen("microdados_enem_2016_coma.csv", "r");
+    FILE *database = fopen("microdados_enem_2016_coma_reduzido_tratados.csv", "r");
 
     if (!database)
         printf("\nERROR: could not open file\n");
     else {
-        printf("\nI was able to open the file\n");
-        char buffer[1024];
-        int row = 0, column = 0;
-
-        long databaseSize, position;
-
-        srand(time(NULL));
-
-        fseek(database, 0, SEEK_END);
-        databaseSize = ftell(database);
-        fseek(database, 0, SEEK_SET);
-
-        while (fgets(buffer, sizeof(buffer), database) && row < MAX_RANDOM_LINES) {
-            column = 0;
-            row++;
-
-            if (row == 1)
-                continue;
-
-            char *data = strtok(buffer, ", ");
-
-            while (data) {
-                if (column == 0)
-                    printf("\n\tSerial code: ");
-                else if (column == 1)
-                    printf("\n\tYear: ");
-                else if (column == 2)
-                    printf("\n\tCity: ");
-                else
-                    printf(" ");  // Adiciona espaço extra após a vírgula
-
-                printf("%s", data);
-                data = strtok(NULL, ", ");
-                column++;
-            }
-            printf("\n");
-        }
+        readInfo(database, MAX_RANDOM_LINES);
         fclose(database);
     }
     return 0;
