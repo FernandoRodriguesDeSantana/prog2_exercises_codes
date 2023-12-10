@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1700132603 source:c:\users\aluno\desktop\finalproject\main.c
+1702225804 source:c:\users\flrss\onedrive\Área de trabalho\finalproject\functions.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -7,13 +7,12 @@
 	<time.h>
 	"functions.h"
 
-1700132175 c:\users\aluno\desktop\finalproject\functions.h
+1702225761 c:\users\flrss\onedrive\Área de trabalho\finalproject\functions.h
 
-1700132609 source:c:\users\aluno\desktop\finalproject\functions.c
+1702225261 source:c:\users\flrss\onedrive\Área de trabalho\finalproject\main.c
 	<stdio.h>
 	<stdlib.h>
-	<conio.h>
 	<string.h>
 	<time.h>
-	"functions.h"
+	<locale.h>
 

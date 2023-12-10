@@ -4,16 +4,30 @@
 #include <string.h>
 #include <time.h>
 #include "functions.h"
+struct StudentData {
+    int NU_INSCRICAO;
+    char SG_UF_RESIDENCIA[3];
+    int NU_IDADE;
+    char TP_SEXO;
+    int TP_COR_RACA;
+    float NU_NOTA_CN;
+    float NU_NOTA_CH;
+    float NU_NOTA_LC;
+    float NU_NOTA_MT;
+    float NU_NOTA_REDACAO;
+    int Q005;
+    float Q006;
+    char Q025;
+};
 
 void readInfo(char *database, int MAX_RANDOM_LINES){
         char buffer[1024];
 
-        int row = 0, column = 0;
+        int row = 0, column = 0, count;
 
         int printColumns[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
         srand(time(NULL));
-        rewind(database);
 
         while (fgets(buffer, sizeof(buffer), database) && row < MAX_RANDOM_LINES) {
             column = 0;
