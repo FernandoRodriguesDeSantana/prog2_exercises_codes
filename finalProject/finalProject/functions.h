@@ -1,6 +1,7 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-void readInfo(char *database, int MAX_RANDOM_LINES);
+void readInfo(FILE *database, int MAX_RANDOM_LINES);
+int charToNumber(char character);
 #endif // FUNCTIONS_H
 
