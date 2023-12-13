@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include "functions.h"
+
 struct Student {
     char serialCode[50];
     int answer1;
@@ -79,10 +80,11 @@ int charToBin(char character) {
         return -1;
     }
 }
+
 void readInfo(FILE *database, int MAX_RANDOM_LINES) {
     char buffer[1024];
-    float aux1 = 0, aux2 = 0, aux3 = 0, aux4 = 0, aux5 = 0, average = 0;
-    int row = 0, column = 0, answer1 = 0, answer2 = 0, answer3 = 0, studentIndex = 0;
+    float aux1 = 0, aux2 = 0, aux3 = 0, aux4 = 0, aux5 = 0, average = 0, scoreSum = 0,scoreSum2 = 0, averageScoreSum = 0, averageScoreSum2 = 0;
+    int row = 0, column = 0, answer1 = 0, answer2 = 0, answer3 = 0, studentIndex = 0, countInternet = 0, countInternet2 = 0;
     struct Student students[100];
     int printColumns[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
@@ -189,9 +191,25 @@ void readInfo(FILE *database, int MAX_RANDOM_LINES) {
         students[studentIndex].answer2 = answer2;
         printf("Answer 3: %d\n", answer3);
         students[studentIndex].answer3 = answer3;
-        studentIndex++;
 
+        printf("\n\n\nAA%.2f", students[studentIndex].average);
+
+        if(students[studentIndex].answer3 == 0){
+            countInternet++;
+            scoreSum += students[studentIndex].average;
+        }
+        else if(students[studentIndex].answer3 == 1){
+            countInternet2++;
+            scoreSum2 += students[studentIndex].average;
+        }
+
+        studentIndex++;
     }
     printf("\n\n");
 
+    printf("\n\n%d students don't have internet access", countInternet);
+    averageScoreSum = scoreSum / countInternet;
+    printf("\nPerformance of students who don't have access to the internet: %.2f", averageScoreSum);
+    averageScoreSum2 = scoreSum2 / countInternet2;
+    printf("\nPerformance of students who have access to the internet:       %.2f", averageScoreSum2);
 }

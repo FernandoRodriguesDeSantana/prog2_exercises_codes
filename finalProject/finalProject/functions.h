@@ -2,6 +2,6 @@
 #define FUNCTIONS_H
 
 void readInfo(FILE *database, int MAX_RANDOM_LINES);
-int charToNumber(char character);
+void storeData(FILE *database, struct StudentData *students, int MAX_RANDOM_LINES);
 #endif // FUNCTIONS_H
 

@@ -1,17 +1,17 @@
 # depslib dependency file v1.0
-1702386293 source:c:\users\jogos\desktop\finalproject\finalproject\main.c
+1702481894 source:c:\users\aluno\desktop\finalproject\finalproject\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<time.h>
 	<locale.h>
 
-1702393544 source:c:\users\jogos\desktop\finalproject\finalproject\functions.c
+1702488883 source:c:\users\aluno\desktop\finalproject\finalproject\functions.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<time.h>
 	"functions.h"
 
-1702393342 c:\users\jogos\desktop\finalproject\finalproject\functions.h
+1702481718 c:\users\aluno\desktop\finalproject\finalproject\functions.h
 
