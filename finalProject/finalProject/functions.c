@@ -83,7 +83,7 @@ int charToBin(char character) {
 
 void readInfo(FILE *database, int MAX_RANDOM_LINES) {
     char buffer[1024];
-    float aux1 = 0, aux2 = 0, aux3 = 0, aux4 = 0, aux5 = 0, average = 0, scoreSum = 0,scoreSum2 = 0, averageScoreSum = 0, averageScoreSum2 = 0;
+    float aux1 = 0, aux2 = 0, aux3 = 0, aux4 = 0, aux5 = 0, average = 0, scoreSum = 0, scoreSum2 = 0, scoreSum3 = 0, averageScoreSum = 0, averageScoreSum2 = 0;
     int row = 0, column = 0, answer1 = 0, answer2 = 0, answer3 = 0, studentIndex = 0, countInternet = 0, countInternet2 = 0;
     struct Student students[100];
     int printColumns[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
@@ -192,8 +192,6 @@ void readInfo(FILE *database, int MAX_RANDOM_LINES) {
         printf("Answer 3: %d\n", answer3);
         students[studentIndex].answer3 = answer3;
 
-        printf("\n\n\nAA%.2f", students[studentIndex].average);
-
         if(students[studentIndex].answer3 == 0){
             countInternet++;
             scoreSum += students[studentIndex].average;
@@ -202,7 +200,6 @@ void readInfo(FILE *database, int MAX_RANDOM_LINES) {
             countInternet2++;
             scoreSum2 += students[studentIndex].average;
         }
-
         studentIndex++;
     }
     printf("\n\n");

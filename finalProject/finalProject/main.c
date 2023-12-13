@@ -17,16 +17,9 @@ int main() {
     if (!database)
         printf("\nERROR: could not open file\n");
     else {
-        printf("\nEnter your option:\n(1)Read Info\n(2)Store Info\n\tOption: ");
-        scanf("%d", &option);
-        switch(option){
-            case 1:
-                readInfo(database, MAX_RANDOM_LINES);
-                break;
-            default:
-                break;
+        printf("\nEnem report: ");
+        readInfo(database, MAX_RANDOM_LINES);
         }
         fclose(database);
-    }
     return 0;
 }

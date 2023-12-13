@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1702481894 source:c:\users\aluno\desktop\finalproject\finalproject\main.c
+1702490449 source:c:\users\aluno\desktop\finalproject\finalproject\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<time.h>
 	<locale.h>
 
-1702488883 source:c:\users\aluno\desktop\finalproject\finalproject\functions.c
+1702493694 source:c:\users\aluno\desktop\finalproject\finalproject\functions.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
